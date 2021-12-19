@@ -1,14 +1,3 @@
-console.log('Client side javascript file is loaded');
-
-fetch('http://localhost:3000/weather?address=Boston').then((response) => {
-    response.json().then((data) => {
-        if (data.error) {
-            return console.log(data.error);
-        }
-        console.log(data.location + data.forecast);
-    });
-});
-
 const weatherForm = document.querySelector('form');
 const search = document.querySelector('input');
 const messageOne = document.querySelector('#message-1');
